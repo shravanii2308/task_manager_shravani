@@ -1,7 +1,7 @@
 /* src/App.css */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f8f8f8;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,16 +12,16 @@ body {
 
 .container {
   text-align: center;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 600px;
 }
 
 h1 {
-  color: #007bff;
+  color: #ff69b4;
 }
 
 ul {
@@ -31,9 +31,18 @@ ul {
 
 li {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+span.task-name {
+  font-weight: bold;
+  flex-grow: 1;
 }
 
 input[type="checkbox"] {
@@ -42,21 +51,29 @@ input[type="checkbox"] {
 
 button {
   cursor: pointer;
-  background-color: #dc3545;
+  background-color: #4caf50;
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 8px;
   border-radius: 4px;
+  font-weight: bold;
 }
 
-button.edit-button {
-  background-color: #007bff;
+button.edit-button,
+button.delete-button {
+  background-color: #3498db;
+  margin-left: 5px; 
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-input[type="text"],
-textarea,
-select,
-button {
+form input,
+form textarea,
+form select,
+form button {
   width: 100%;
   margin-top: 10px;
 }
@@ -65,25 +82,24 @@ button {
   .container {
     width: 90%;
   }
-}
-/* Add these styles to src/App.css */
-button.edit-button {
-  background-color: #007bff;
-  color: white;
-}
 
-li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 600px) {
   button {
     font-size: 0.8rem;
   }
+}
+.task-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; 
+  margin: 0 auto;
+}
+
+.task-form label {
+  margin-bottom: 5px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  margin-bottom: 10px;
 }
